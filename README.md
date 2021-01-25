@@ -1,3 +1,3 @@
 # popcat-web
 
-only works in desktop/laptops
+only works well on desktop/laptops
