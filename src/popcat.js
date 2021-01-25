@@ -33,3 +33,9 @@ all.addEventListener("mouseup", drelease);
 window.document.oncontextmenu=new Function("return false");
 window.document.onselectstart=new Function("return false");
 window.document.ondragstart=new Function("return false");
+
+window.oncontextmenu = function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+};
