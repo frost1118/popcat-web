@@ -2,6 +2,11 @@ const mcat = document.getElementById("mpopcat");
 const maudio = document.getElementById("mpopsound");
 const dcat = document.getElementById("dpopcat");
 const daudio = document.getElementById("dpopsound");
+const image = document.querySelector("img");
+
+image.oncontextmenu=function(){
+    return false;
+}
 
 function mpress(event) {
     mcat.src="src/img/popcat_click.png";
