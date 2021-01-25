@@ -2,11 +2,8 @@ const mcat = document.getElementById("mpopcat");
 const maudio = document.getElementById("mpopsound");
 const dcat = document.getElementById("dpopcat");
 const daudio = document.getElementById("dpopsound");
-const image = document.querySelector("img");
-
-image.oncontextmenu=function(){
-    return false;
-}
+const image = document.querySelector("div");
+const all = document.querySelector("body");
 
 function mpress(event) {
     mcat.src="src/img/popcat_click.png";
@@ -29,6 +26,10 @@ function drelease(event) {
 }
 
 mcat.addEventListener("touchstart", mpress);
-mcat.addEventListener("touchend", mrelease);
+all.addEventListener("touchend", mrelease);
 dcat.addEventListener("mousedown", dpress);
-dcat.addEventListener("mouseup", drelease);
+all.addEventListener("mouseup", drelease);
+
+window.document.oncontextmenu=new Function("return false");
+window.document.onselectstart=new Function("return false");
+window.document.ondragstart=new Function("return false");
